@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+const {useState,useEffect} = React
+
 const App = () => {
     const [nombreCiudad,setNombreCiudad] = useState('Barcelona')
     const [ciudad,setCiudad] = useState(null)
@@ -63,7 +64,7 @@ const App = () => {
         {ciudad && 
           <article className="card">
             <header>{ciudad.name}</header>
-            <img src={`src/assets/${ciudad.weather[0].icon}.svg`} alt="Icono del clima" />
+            <img src={`imagenes/${ciudad.weather[0].icon}.svg`} alt="Icono del clima" />
             <footer>
               <h1 className="temp">Temperatura:{(ciudad.main.temp - 273.15).toFixed(2)}</h1>
               <span className="max">Máxima: {(ciudad.main.temp_max - 273.15).toFixed(2)}°C / Mínima: {(ciudad.main.temp_min - 273.15).toFixed(2)}°C</span> <br />
@@ -75,4 +76,3 @@ const App = () => {
       )
 }
 
-export default App
