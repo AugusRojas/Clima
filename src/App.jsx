@@ -1,5 +1,4 @@
-const {useState,useEffect} = React
-
+import React, { useState, useEffect } from 'react';
 const App = () => {
     const [nombreCiudad,setNombreCiudad] = useState('Barcelona')
     const [ciudad,setCiudad] = useState(null)
@@ -76,3 +75,4 @@ const App = () => {
       )
 }
 
+export default App
